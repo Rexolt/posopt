@@ -1,0 +1,328 @@
+Ez a dokumentáció bemutatja a helyzet- és pozíció-kezelő utility CSS használatát. Olyan könnyen értelmezhető és intuitív osztályokat tartalmaz, amelyekkel gyorsan és következetesen tudod kezelni a HTML elemek pozícióját.
+
+1. Telepítés
+
+Másold a position-utils.css fájlt a projekted css mappájába.
+
+
+
+Használd az osztályokat közvetlenül a HTML elemeken!
+
+2. Változók (:root)
+
+A következő CSS-változók definiálják az ofszet-lépéseket és százalékos értékeket:
+
+Változó
+
+Érték
+
+Leírás
+
+--lep
+
+1rem
+
+Alap egység
+
+--ert0
+
+0
+
+Nulla ofszet
+
+--ert1
+
+0.25rem
+
+Negyed lépés
+
+--ert2
+
+0.5rem
+
+Fél lépés
+
+--ert3
+
+1rem
+
+Egy lépés
+
+--ert4
+
+2rem
+
+Kettő lépés
+
+--ert5
+
+3rem
+
+Három lépés
+
+--ert6
+
+4rem
+
+Négy lépés
+
+--p25
+
+25%
+
+Negyed szélesség
+
+--p50
+
+50%
+
+Fél szélesség
+
+--p75
+
+75%
+
+Háromnegyed szélesség
+
+3. Pozíciótípusok
+
+Osztály
+
+CSS-tulajdonság
+
+.helyzet-statikus
+
+position: static;
+
+.helyzet-relativ
+
+position: relative;
+
+.helyzet-abszolut
+
+position: absolute;
+
+.helyzet-rogzitett
+
+position: fixed;
+
+.helyzet-ragad
+
+position: sticky; top: 0;
+
+4. Ofszetek (Top, Bottom, Left, Right)
+
+4.1. Függőleges
+
+Osztály
+
+Tulajdonság
+
+.fel-0
+
+top: var(--ert0)
+
+.fel-1
+
+top: var(--ert1)
+
+.fel-2
+
+top: var(--ert2)
+
+.fel-3
+
+top: var(--ert3)
+
+.fel-4
+
+top: var(--ert4)
+
+.fel-5
+
+top: var(--ert5)
+
+.fel-6
+
+top: var(--ert6)
+
+.fel-25p
+
+top: var(--p25)
+
+.fel-50p
+
+top: var(--p50)
+
+.fel-75p
+
+top: var(--p75)
+
+Osztály
+
+Tulajdonság
+
+.lent-0
+
+bottom: var(--ert0)
+
+.lent-1
+
+bottom: var(--ert1)
+
+.lent-2
+
+bottom: var(--ert2)
+
+.lent-3
+
+bottom: var(--ert3)
+
+.lent-4
+
+bottom: var(--ert4)
+
+.lent-5
+
+bottom: var(--ert5)
+
+.lent-6
+
+bottom: var(--ert6)
+
+.lent-25p
+
+bottom: var(--p25)
+
+.lent-50p
+
+bottom: var(--p50)
+
+.lent-75p
+
+bottom: var(--p75)
+
+4.2. Vízszintes
+
+Osztály
+
+Tulajdonság
+
+.bal-0
+
+left: var(--ert0)
+
+.bal-1
+
+left: var(--ert1)
+
+.bal-2
+
+left: var(--ert2)
+
+.bal-3
+
+left: var(--ert3)
+
+.bal-4
+
+left: var(--ert4)
+
+.bal-5
+
+left: var(--ert5)
+
+.bal-6
+
+left: var(--ert6)
+
+.bal-25p
+
+left: var(--p25)
+
+.bal-50p
+
+left: var(--p50)
+
+.bal-75p
+
+left: var(--p75)
+
+Osztály
+
+Tulajdonság
+
+.jobb-0
+
+right: var(--ert0)
+
+.jobb-1
+
+right: var(--ert1)
+
+.jobb-2
+
+right: var(--ert2)
+
+.jobb-3
+
+right: var(--ert3)
+
+.jobb-4
+
+right: var(--ert4)
+
+.jobb-5
+
+right: var(--ert5)
+
+.jobb-6
+
+right: var(--ert6)
+
+.jobb-25p
+
+right: var(--p25)
+
+.jobb-50p
+
+right: var(--p50)
+
+.jobb-75p
+
+right: var(--p75)
+
+5. Középre igazító util osztályok
+
+Osztály
+
+Leírás
+
+.kozeppont-abszolut
+
+abszolút középre igazítás (top/left 50% + transform)
+
+.kozeppont-flex
+
+flexbox középre igazítás
+
+.kozeppont-grid
+
+grid középre igazítás
+
+6. Példák
+
+<!-- Abszolút pozícionált ikon a jobb felső sarokban -->
+<div class="helyzet-relativ">
+  <span class="helyzet-abszolut jobb-3 fel-3">🔔</span>
+</div>
+
+<!-- Fix fejléc -->
+<header class="helyzet-rogzitett fel-0 bal-0 jobb-0">
+  <h1>Oldal címe</h1>
+</header>
+
+<!-- Flex középre igazított tartalom -->
+<section class="kozeppont-flex" style="height: 300px;">
+  <button>Kattints rám!</button>
+</section>
