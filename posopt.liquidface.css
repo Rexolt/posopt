@@ -1,0 +1,67 @@
+:root {
+  --lep: 1rem;
+  --ert0: 0;
+  --ert1: calc(var(--lep) * 0.25);
+  --ert2: calc(var(--lep) * 0.5);
+  --ert3: var(--lep);
+  --ert4: calc(var(--lep) * 2);
+  --ert5: calc(var(--lep) * 3);
+  --ert6: calc(var(--lep) * 4);
+  --p25: 25%;
+  --p50: 50%;
+  --p75: 75%;
+}
+
+.helyzet-statikus  { position: static; }
+.helyzet-relativ   { position: relative; }
+.helyzet-abszolut  { position: absolute; }
+.helyzet-rogzitett { position: fixed; }
+.helyzet-ragad     { position: sticky; top: 0; }
+
+.fel-0  { top: var(--ert0); }
+.fel-1  { top: var(--ert1); }
+.fel-2  { top: var(--ert2); }
+.fel-3  { top: var(--ert3); }
+.fel-4  { top: var(--ert4); }
+.fel-5  { top: var(--ert5); }
+.fel-6  { top: var(--ert6); }
+.fel-25p { top: var(--p25); }
+.fel-50p { top: var(--p50); }
+.fel-75p { top: var(--p75); }
+
+.lent-0  { bottom: var(--ert0); }
+.lent-1  { bottom: var(--ert1); }
+.lent-2  { bottom: var(--ert2); }
+.lent-3  { bottom: var(--ert3); }
+.lent-4  { bottom: var(--ert4); }
+.lent-5  { bottom: var(--ert5); }
+.lent-6  { bottom: var(--ert6); }
+.lent-25p { bottom: var(--p25); }
+.lent-50p { bottom: var(--p50); }
+.lent-75p { bottom: var(--p75); }
+
+.bal-0   { left: var(--ert0); }
+.bal-1   { left: var(--ert1); }
+.bal-2   { left: var(--ert2); }
+.bal-3   { left: var(--ert3); }
+.bal-4   { left: var(--ert4); }
+.bal-5   { left: var(--ert5); }
+.bal-6   { left: var(--ert6); }
+.bal-25p  { left: var(--p25); }
+.bal-50p  { left: var(--p50); }
+.bal-75p  { left: var(--p75); }
+
+.jobb-0   { right: var(--ert0); }
+.jobb-1   { right: var(--ert1); }
+.jobb-2   { right: var(--ert2); }
+.jobb-3   { right: var(--ert3); }
+.jobb-4   { right: var(--ert4); }
+.jobb-5   { right: var(--ert5); }
+.jobb-6   { right: var(--ert6); }
+.jobb-25p  { right: var(--p25); }
+.jobb-50p  { right: var(--p50); }
+.jobb-75p  { right: var(--p75); }
+
+.kozeppont-abszolut { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.kozeppont-flex     { display: flex;    align-items: center; justify-content: center; }
+.kozeppont-grid     { display: grid;    place-items: center; }
