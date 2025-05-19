@@ -1,0 +1,98 @@
+
+:root {
+  --kartya-blur: 8px;
+  --kartya-saturate: 200%;
+  --kartya-bg: rgba(17, 25, 40, 0.46);
+  --kartya-border: rgba(255, 255, 255, 0.125);
+  --kartya-radius: 12px;
+  --kartya-padding: 1.5rem;
+  --kartya-gap: 1rem;
+  --kartya-btn-bg: rgba(255, 255, 255, 0.2);
+  --kartya-btn-radius: 6px;
+  --kartya-btn-padding: 0.5rem 1rem;
+}
+
+
+.kartya {
+  backdrop-filter: blur(var(--kartya-blur)) saturate(var(--kartya-saturate));
+  -webkit-backdrop-filter: blur(var(--kartya-blur)) saturate(var(--kartya-saturate));
+  background-color: var(--kartya-bg);
+  border: 1px solid var(--kartya-border);
+  border-radius: var(--kartya-radius);
+  padding: var(--kartya-padding);
+  color: #fff;
+  margin: var(--kartya-gap) 0;
+}
+
+
+.kartya--1oszlop {
+  display: block;
+}
+
+
+.kartya--2oszlop {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--kartya-gap);
+}
+
+
+.kartya--kepszoveg {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--kartya-gap);
+}
+
+
+.kartya--horiz {
+  display: flex;
+  gap: var(--kartya-gap);
+  align-items: flex-start;
+}
+
+
+.kartya__kep {
+  border-radius: calc(var(--kartya-radius) / 1.5);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.kartya__kep img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+.kartya__tartalom {
+  display: block;
+}
+
+.kartya__lablec {
+  margin-top: var(--kartya-gap);
+  display: flex;
+  justify-content: flex-end;
+  gap: calc(var(--kartya-gap) / 2);
+}
+
+
+.kartya__gomb {
+  background-color: var(--kartya-btn-bg);
+  border: none;
+  border-radius: var(--kartya-btn-radius);
+  padding: var(--kartya-btn-padding);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.kartya__gomb:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+@media (min-width: 768px) {
+  .kartya--2oszlop-md {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--kartya-gap);
+  }
+}
